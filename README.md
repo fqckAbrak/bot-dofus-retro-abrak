@@ -29,7 +29,6 @@ Flash (Abrak) ──► WinDivert ──► Proxy MITM (8080) ──► Serveur 
 
 - **Windows 10/11** (WinDivert est Windows-only)
 - **Python 3.10+**
-- **[Abrak Launcher](https://www.dofus-retro.org/)** — client Dofus Rétro officiel
 - **Droits Administrateur** pour le mode WinDivert (recommandé)
 
 ---
