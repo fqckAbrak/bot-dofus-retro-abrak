@@ -1,7 +1,55 @@
-# Dofus Rétro Bot — Proxy MITM 1.29
+# Dofus Rétro Bot — Proxy MITM 1.29 (Abrak)
 
-Bot d'automatisation pour **Dofus Rétro 1.29** basé sur une architecture proxy MITM (Man-in-the-Middle).  
-Le client Flash communique normalement avec le serveur — le bot intercepte, lit et injecte des messages protocole sans modifier le client.
+Bot MITM **open-source** (MIT) pour **Dofus Rétro 1.29**, calé sur le serveur privé **Abrak** et prêt à l'emploi.  
+Le client Flash communique normalement avec le serveur : le bot intercepte, lit et injecte les messages protocole sans toucher au client (hors patches optionnels : no-anim, inventaire, worldmap).
+
+Le code est structuré pour rester lisible et maintenable (y compris via un LLM) : sessions isolées, handlers protocole, dashboard tkinter, scripts utilisateur.
+
+---
+
+## Fonctionnalités
+
+### Proxy MITM & multi-team
+- Interception transparente des connexions Abrak (**WinDivert** en admin, repli **Frida** sans droits).
+- Plusieurs clients en parallèle : chaque client = une **team** indépendante (état, clés réseau, boucles bot, onglet dashboard).
+- Parsing / injection du protocole 1.29 à la volée (XOR + Base64 Dofus), sans désynchroniser Flash.
+
+### Mode héros
+- Gestion native du mode héros Abrak : 1 perso principal + compagnons sur la même connexion (jusqu'à **8 persos** par client).
+- Équipes **monoclasse ou mixtes** : chaque classe a sa propre séquence de sorts (réglages par compte dans `bot_settings.json`).
+- Tours, sorts, stats et positions suivis pour tous les héros.
+
+### Combat
+- Farm automatique tour par tour : ciblage, ligne de vue, portée, AOE, repositionnement, repli.
+- Comportements **distance** / **rush CàC**, ignore des invocations (avec fallback si elles bloquent).
+- Modes de discrétion : **humain** (pauses, AFK, misclicks), **farming**, **speed** (rafale, aucun délai — le speedhack).
+- Dépôt banque auto en cas de surpoids, auto-boost de caractéristiques, stats de session.
+
+### Récolte
+- Récolte automatique (ressource la plus proche), filtrage par métier (bûcheron, mineur, paysan, alchimiste, pêcheur…).
+- Routes multi-maps et scripts prêts à l'emploi (Féodala, mine de Brakmar, farm combat).
+
+### Commerce & HDV
+- Vente automatique au **PNJ marchand** : filtres famille / niveau / blacklist.
+- Inventaire complet (équipements, conso, ressources) via dump client.
+- HDV : scan des certificats de **dragodindes non castrées** (couleur, prix, fiche monture).
+
+### Autopilote & navigation
+- Voyage automatique vers une coordonnée monde `(X, Y)` (BFS sur le graphe des maps).
+- Trajets **par team** : aperçu, exécution, re-planification si un bord échoue.
+- Pathfinding A* intra-map + changement de carte.
+
+### Client (optionnel)
+- **No-anim** : déplacements instantanés **en combat** (patch du client, bascule depuis Paramètres).
+- Combiné avec le mode **speed** : tours en rafale, sans délai.
+
+### Dashboard
+- Onglets par team : Personnage, Carte, Inventaire, Métiers, Combat, Scripts, Misc (vente + autopilote), HDV, Paramètres, Console.
+- Barre d'état, notifications toast, thème sombre.
+
+### Confort / anti-suspicion
+- Réponses auto aux MP (opt-in), réaction au challenge antibot serveur.
+- Scripts Python dynamiques lancés depuis l'UI.
 
 ---
 
