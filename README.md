@@ -65,8 +65,8 @@ Créer un fichier `config.json` à la racine du projet :
 
 ```json
 {
-  "server_host": "51.89.153.20",
-  "server_port": 26118,
+  "server_host": "15.224.21.90",
+  "server_port": 443,
   "proxy_host": "127.0.0.1",
   "proxy_port": 8080,
   "game_ports": [1303, 1304]
