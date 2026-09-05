@@ -1,0 +1,28 @@
+{
+  "max_level": 120,
+  "blacklist_names": [
+    "Epis de Farle",
+    "Bottes du Koalak",
+    "Sabots de Farle",
+    "Epis de Shika",
+    "Sabots de Shika",
+    "Geta Aerdala",
+    "Amulette Terrdala",
+    "Geta Terrdala",
+    "La Doubitch O'Boul"
+  ],
+  "blacklist_gids": [],
+  "categories": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    10,
+    11
+  ],
+  "merchant_gfx": [
+    "2150"
+  ]
+}

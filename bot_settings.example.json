@@ -1,0 +1,59 @@
+{
+    "defaults": {
+        "attack_spells_by_class": {
+            "9": [
+                {
+                    "spell_id": 180,
+                    "count": 1,
+                    "target": "self"
+                },
+                {
+                    "spell_id": 179,
+                    "count": 2,
+                    "target": "aoe2"
+                }
+            ],
+            "3": [
+                {
+                    "spell_id": 51,
+                    "count": 3,
+                    "target": "enemy"
+                }
+            ]
+        },
+        "combat_behavior": "distance",
+        "combat_max_monsters_per_group": 8,
+        "combat_slow_when_player": false,
+        "combat_spectator_delay_min_ms": 200,
+        "combat_spectator_delay_max_ms": 2000,
+        "combat_player_delay_min_ms": 750,
+        "combat_player_delay_max_ms": 3500,
+        "combat_delay_before_ready": true,
+        "combat_ready_delay_min_ms": 50,
+        "combat_ready_delay_max_ms": 150
+    },
+    "accounts": {
+        "Perso-A": {
+            "combat_behavior": "rush_cac"
+        },
+        "Perso-B": {
+            "attack_spells_by_class": {
+                "9": [
+                    {
+                        "spell_id": 183,
+                        "count": 1,
+                        "target": "enemy"
+                    }
+                ]
+            },
+            "auto_boost": {},
+            "combat_speed_mode": true
+        },
+        "Perso-C": {
+            "combat_discretion_mode": "human",
+            "combat_slow_when_player": true,
+            "combat_ready_delay_min_ms": 250,
+            "combat_ready_delay_max_ms": 320
+        }
+    }
+}

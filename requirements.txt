@@ -1,0 +1,9 @@
+# Interception réseau
+pydivert          # WinDivert — redirection SOCKET (nécessite les droits admin)
+frida             # hook ws2_32!connect() — repli sans droits admin
+fritm             # helper de hook au-dessus de frida
+psutil            # détection du process client
+scapy             # tools/sniff_server.py uniquement (hors runtime du bot)
+
+# Tests
+pytest

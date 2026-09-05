@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Exécutable produit par PyInstaller (se rebuild via dofus-bot.spec)
+*.exe
+
+# Sauvegardes locales de fichiers source
+*.bak
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+.env
+
+# Logs de session
+logs/
+*.log
+
+# Configuration locale (contient IP serveur — ne pas committer)
+config.json
+
+# Réglages combat locaux (contiennent les pseudos des personnages)
+# Modèle versionné : bot_settings.example.json
+bot_settings.json
+
+# Outils de débogage / capture réseau
+decode_output.txt
+*.pcap
+*.pcapng
+
+# IDE
+.vscode/
+.cursor/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Données générées / caches
+*.cache
+
+# Assets graphiques extraits du client (~64 Mo, aucun code ne les charge).
+# Les DONNÉES nécessaires au runtime (maps/, spells.xml, items.json,
+# Recolte.txt, world_graph.json…) restent versionnées.
+ressources/Items/
+ressources/gfx/
+ressources/stats/
